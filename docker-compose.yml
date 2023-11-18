@@ -1,0 +1,16 @@
+services:
+  container1:
+    build : .
+    image: therealflash/tp2_worker
+    environment:
+      - INSTANCE_IP=${INSTANCE_IP}
+    ports:
+      - "5000:5000"
+
+  container2:
+    build : .
+    image: therealflash/tp2_worker
+    environement:
+      - INSTANCE_IP=${INSTANCE_IP}
+    ports:
+      - "5001:5000"
